@@ -94,4 +94,4 @@ sudo ln -s /etc/php/7.4/mods-available/mongo.ini /etc/php/7.4/cli/conf.d/20-mong
 sudo ln -s /etc/php/7.4/mods-available/mongo.ini /etc/php/7.4/fpm/conf.d/20-mongo.ini
 sudo service php7.4-fpm restart
 
-mongo admin --eval "db.createUser({user:'homestead',pwd:'secret',roles:['root']})"
+mongo admin --eval "db.createUser({user:'root',pwd:'example',roles:['root']})"

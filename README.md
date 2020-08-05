@@ -40,6 +40,24 @@ These are the credentials for login into [Mongo express](https://github.com/mong
 MONGOEXPRESS_LOGIN=dev
 MONGOEXPRESS_PASSWORD=dev
 ```
+
+## Use Homestead
+
+If you don't want to use Docker, you can use homestead instead, the steps are:
+
+- Clone the repository
+- Copy ```.env-example``` to ```.env```
+- Copy ```Homestead.yaml.example``` to ```Homestead.yaml```
+- Modify ```Homestead.yaml``` and specify your project path
+- Run ```vagrant up```
+- Wait it to finish and run  ```vagrant ssh```
+- Run ```cd code```
+- Run  ```composer install```
+- Generate the Laravel APP_KEY with ```php artisan key:generate```
+- Go to http://192.168.10.10/
+
+
+
 ## Contributing
 
 Any improvement comment would be awesome, I'm very new in the Docker and DevOps world.

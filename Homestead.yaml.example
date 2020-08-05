@@ -2,12 +2,10 @@ ip: 192.168.10.10
 memory: 2048
 cpus: 2
 provider: virtualbox
-authorize: ~/.ssh/id_rsa.pub
-keys:
-    - ~/.ssh/id_rsa
+
 folders:
     -
-        map: /var/www/html
+        map: /Code/laravel-6-mongodb/  #TODO SPECIFY PROJECT PATH HERE
         to: /home/vagrant/code
 sites:
     -
@@ -16,11 +14,9 @@ sites:
 databases:
     - homestead
 features:
-    -
-        mariadb: false
-    -
-        ohmyzsh: false
-    -
-        webdriver: false
-name: html
-hostname: html
+    - mongodb: true
+    - ohmyzsh: true
+    - webdriver: false
+
+name: laravel-6-mongo
+hostname: laravel-6-mongo

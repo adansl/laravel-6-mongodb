@@ -265,6 +265,7 @@ function xphp() {
     php \
         -dxdebug.remote_host=192.168.10.1 \
         -dxdebug.remote_autostart=1 \
+        -dxdebug.remote_connect_back=1 \
         "$@"
 
     if ! $XDEBUG_ENABLED; then xoff; fi
